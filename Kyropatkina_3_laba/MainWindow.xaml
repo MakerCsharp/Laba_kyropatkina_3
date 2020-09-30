@@ -8,16 +8,20 @@
         Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize"  WindowStyle="None">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="63*"/>
-            <ColumnDefinition Width="337*"/>
+            <ColumnDefinition Width="126*"/>
+            <ColumnDefinition Width="621*"/>
+            <ColumnDefinition Width="53*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="37*"/>
             <RowDefinition Height="10*"/>
-            <RowDefinition Height="403*"/>
+            <RowDefinition Height="381*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="2" Grid.Column="1">
+
+        <Grid Grid.Row="2" Grid.Column="1" Grid.RowSpan="3" Grid.ColumnSpan="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="4*"/>
                 <RowDefinition Height="27*"/>
@@ -26,47 +30,85 @@
             <Grid Grid.Row="0" Background="#FF48B08F">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="188*"/>
-                    <ColumnDefinition Width="8*"/>
-                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="11*"/>
+                    <ColumnDefinition Width="17*"/>
                     <ColumnDefinition Width="121*"/>
                 </Grid.ColumnDefinitions>
-
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="9*"/>
+                        <RowDefinition Height="26*"/>
+                        <RowDefinition Height="17*"/>
+                    </Grid.RowDefinitions>
+                    <Image Source="image\image for any button\ball_point_pen_64px.png" Grid.Row="1"/>
+                </Grid>
                 <Grid Grid.Column="3">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
+                        <ColumnDefinition Width="81*"/>
+                        <ColumnDefinition Width="74*"/>
+                        <ColumnDefinition Width="87*"/>
                     </Grid.ColumnDefinitions>
 
 
-                    <Button Grid.Column="0" Width="50" Height="22" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                    <Button Grid.Column="1" Width="50" Height="22" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                    <Button Grid.Column="2" Width="50" Height="22" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Button Grid.Column="0" Width="50" Height="22" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Exit" Foreground="White" Background="#FF48B08F"   />
+                    <Button Grid.Column="1" Width="50" Height="22" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Preview" Foreground="White" Background="#FF48B08F" />
+                    <Button Grid.Column="2" Width="80" Height="22" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Save Changes"  Foreground="White" Background="#FF48B08F" />
 
                 </Grid>
 
 
                 <Grid Grid.Row="0" OpacityMask="#FFFBFBFB">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="19*"/>
                         <RowDefinition Height="7*"/>
                     </Grid.RowDefinitions>
 
-                    <TextBox Grid.Row="0" Width="370" Height="35" Opacity="10">
+                    <TextBox Grid.Row="0" Width="370" Height="35" Opacity="10" Margin="3,2,3,1" Background="#FF72BEA2" x:Name="textBox1"/>
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="93*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text=" Create by mark Smith" FontSize="7"   Visibility="Visible" Grid.Column="2"  Foreground="#FFF0F0F0"/>
+                    </Grid>
 
-                    </TextBox>
-
-                    <TextBlock Grid.Row="1" Text=" Create by mark Smith" FontSize="5"   Visibility="Visible" >
-
-                    </TextBlock>
 
                 </Grid>
 
 
             </Grid>
 
-            <Grid Grid.Row="1">
-                <Frame/>
+            <Grid Grid.Row="1" Background="#FFD6D6D6">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="33*"/>
+                    <ColumnDefinition Width="610*"/>
+                    <ColumnDefinition Width="31*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="23*"/>
+                    <RowDefinition Height="273*"/>
+                    <RowDefinition Height="55*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="2" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="9*"/>
+                        <RowDefinition Height="11*"/>
+                        <RowDefinition Height="36*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="542*"/>
+                        <ColumnDefinition Width="69*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Row="1" Grid.Column="1" FontSize="8" Foreground="#FFFFFDFD">
+                        Show source code
+                    </TextBlock>
+
+                </Grid>
+                <Frame  Grid.Row="1" Grid.Column="1"  Source="Page1.xaml" />
                 <!-- Width 674-->
                 <!-- Heigth 351-->
             </Grid>
@@ -76,7 +118,7 @@
 
 
         <!-- Разметка кнопок с лева-->
-        <Grid Grid.Row="2" Background="#FF30343F" >
+        <Grid Grid.Row="2" Background="#FF30343F" Grid.RowSpan="3" >
             <Grid.RowDefinitions>
                 <!-- 1 кнопка -->
                 <RowDefinition Height="19*"/>
@@ -93,6 +135,9 @@
                 <RowDefinition Height="264*"/>
 
             </Grid.RowDefinitions>
+            <Grid >
+
+            </Grid>
 
             <Button Grid.Row="1" Background="#FF30343F" BorderBrush="#FF30343F" Foreground="#FF30343F">
                 <Grid Width="117.81" Height="20.431" >
@@ -128,7 +173,7 @@
                 </Grid>
             </Button>
             <Button Grid.Row="4" Background="#FF30343F" BorderBrush="#FF30343F" Foreground="#FF30343F">
-                
+
                 <Grid Width="117.81" Height="20.431" >
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="29*"/>
@@ -160,7 +205,7 @@
 
         </Grid>
 
-        <Grid Grid.RowSpan="2"  Grid.Column="1">
+        <Grid Grid.RowSpan="2"  Grid.Column="1" Grid.ColumnSpan="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="37*"/>
                 <RowDefinition Height="10*"/>
@@ -217,7 +262,20 @@
                         <RowDefinition Height="31*"/>
                         <RowDefinition Height="16*"/>
                     </Grid.RowDefinitions>
-                    <Button VerticalAlignment="Bottom" HorizontalAlignment="Center" Height="10" Width="50.444"  Grid.Column="0"/>
+                    <ComboBox VerticalAlignment="Bottom" HorizontalAlignment="Center" Height="9" Width="54"  Grid.Column="0" BorderBrush="White" Text="123" IsEditable="True"
+                              IsReadOnly="True" Margin="0,0,3,0">
+                        <ComboBox.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                                <GradientStop Color="White" Offset="1"/>
+                            </LinearGradientBrush>
+                        </ComboBox.Background>
+                        <Button Content="Registration"  Background="White" BorderBrush="White"  />
+                        <Button Content="Aothorization" Background="White" BorderBrush="White"/>
+                        <Button Content="Exit" Background="{x:Null}" BorderBrush="White"/>
+                        <Button Content="Settings" Background="White" BorderBrush="White"/>
+                        <GridSplitter/>
+                    </ComboBox>
                 </Grid>
 
 

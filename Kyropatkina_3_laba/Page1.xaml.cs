@@ -24,5 +24,7 @@ namespace Kyropatkina_3_laba
         {
             InitializeComponent();
         }
+
+        
     }
 }

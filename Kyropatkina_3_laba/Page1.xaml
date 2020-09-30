@@ -6,60 +6,329 @@
       xmlns:local="clr-namespace:Kyropatkina_3_laba"
       mc:Ignorable="d" 
       d:DesignHeight="351" d:DesignWidth="674"  Background="#FFD6D6D6"
-      Title="Page1">
+      Title="Page1" Width="610" Height="273">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="205*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="397*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="8*"/>
-            <RowDefinition Height="74*"/>
-            <RowDefinition Height="74*"/>
-            <RowDefinition Height="77*"/>
-            <RowDefinition Height="52*"/>
-            <RowDefinition Height="28*"/>
-            <RowDefinition Height="38*"/>
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="66*"/>
+            <RowDefinition/>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="20*"/>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0" Grid.RowSpan="2">
+        <Grid Grid.Row="0" Grid.Column="0" Background="White">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="259*"/>
-                <ColumnDefinition Width="10*"/>
-                <ColumnDefinition Width="405*"/>
+                <ColumnDefinition Width="7*"/>
+                <ColumnDefinition Width="198*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="75*"/>
-                <RowDefinition Height="7*"/>
+                <RowDefinition Height="16*"/>
+                <RowDefinition Height="37*"/>
             </Grid.RowDefinitions>
 
-            <Grid Grid.Row="0" >
-                <Grid Grid.Row="0">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="7*"/>
-                        <RowDefinition Height="18*"/>
-                    </Grid.RowDefinitions>
-                    <Rectangle Fill="White" Height="75" VerticalAlignment="Center" HorizontalAlignment="Center" Width="259" Grid.RowSpan="2"/>
-                    <TextBlock Grid.Row="0" Text="Define a new Segment"/>
-                    <TextBlock Grid.Row="1" FontSize="8" >
-                         Add a Conditio to define a segment .The more 
-                        <LineBreak/>
-                        сonditions you add the more specific your segment 
-                        <LineBreak/>
-                        will be.
+            <!-- Разметка " Define a new Segment "-->
+            <Grid Grid.Row="0" Grid.Column="1" >
 
-                    </TextBlock>
+                <TextBlock Text="Defitne a new Segment" Foreground="Gray" FontSize="10"/>
 
 
-                </Grid>
+
             </Grid>
-
-            <Grid Grid.Row="0" Grid.Column="3">
-
-                <Grid>
-                    <Rectangle Fill="White" HorizontalAlignment="Left" Height="75" VerticalAlignment="Top" Width="405"/>
-                </Grid>
-
-
+            <!-- Разметка самой страницы в -->
+            <Grid Grid.Row="1" Grid.Column="1">
+                <TextBlock FontSize="8" Foreground="Gray" >
+                     Add a Connetcion to define a segmenet . The more 
+                    <LineBreak/>
+                     conditions you add the more specific your segment
+                    <LineBreak/>
+                    will be.
+                </TextBlock>
 
             </Grid>
         </Grid>
+
+        <Grid Grid.Row="0" Grid.Column="2" Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="192*"/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="16*"/>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="13*"/>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="8*"/>
+                <RowDefinition Height="8*"/>
+            </Grid.RowDefinitions>
+            <!-- Estimadted segment size-->
+            <Grid Grid.Row="0" Grid.Column="1">
+                <TextBlock Text="Estimated segment size" Foreground="Gray"/>
+            </Grid>
+
+            <Grid Grid.Row="2" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="34*"/>
+                    <ColumnDefinition Width="363*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Column="0" Text="10-20%" Foreground="#FF57BF9C" FontSize="8"/>
+                <TextBlock Grid.Column="1"  Text="of yout sotail traffic excepted to join based on a sample of hietoncial data" FontSize="8" Foreground="Gray"/>
+            </Grid>
+            <Grid Grid.Row="4" Grid.Column="1">
+                <ProgressBar Value="50" FontSize="8" />
+            </Grid>
+
+
+        </Grid>
+
+        <Grid Grid.Row="2" Background="White" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="7*"/>
+                <ColumnDefinition Width="603*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="9*"/>
+                <RowDefinition Height="11*"/>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="9*"/>
+
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Grid.Column="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="102*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="227*"/>
+                    <ColumnDefinition Width="172*"/>
+                    <ColumnDefinition Width="97*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Product purchased " Grid.Column="0" Foreground="Gray" />
+                <TextBlock  Text="What product have they interacted with?" Grid.Column="2" Foreground="Gray" FontSize="10" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Button   Grid.Column="4" Margin="0,3,10,0" FontSize="8" Background="{x:Null}" BorderBrush="Gray" Foreground="Gray" >
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel Orientation="Horizontal" Height="10">
+                            <Image Source="image\image for any button\trash_can_64px.png" Height="10" Width="11"/>
+                            <TextBlock Text="Delete" Height="9"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Button>
+                <TextBlock Text="-" Grid.Column="1" Foreground="Gray"/>
+            </Grid>
+
+            <Grid Grid.Row="1" Grid.Column="2" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="112*"/>
+                    <ColumnDefinition Width="10*"/>
+                    <ColumnDefinition Width="57*"/>
+                    <ColumnDefinition Width="10*"/>
+                    <ColumnDefinition Width="177*"/>
+                    <ColumnDefinition Width="244*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0">
+                    <ComboBox x:Name="combobox_1" Height="16"  
+                              IsEditable="True"
+                              IsReadOnly="True"
+                              Text="Text_1" FontSize="8" Foreground="Gray"
+                              />
+                </Grid>
+
+                <Grid Grid.Column="2">
+                    <ComboBox Height="16" IsEditable="True"
+                              IsReadOnly="True"
+                              Text="Text_2" FontSize="8" Foreground="Gray">
+
+                    </ComboBox>
+                </Grid>
+
+                <Grid Grid.Column="4">
+
+                    <TextBox>
+
+                    </TextBox>
+                </Grid>
+
+
+
+            </Grid>
+            <Grid Grid.Row="4" Grid.Column="1">
+                <Button Width="60" HorizontalAlignment="Left" Margin="0,0,0,4" Content=" + More" FontSize="9" Background="{x:Null}" BorderBrush="Gray" Foreground="Gray" />
+            </Grid>
+
+
+        </Grid>
+
+        <Grid Grid.Row="4" Background="White" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="19*"/>
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="19*"/>
+                <RowDefinition Height="11*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="11*"/>
+                    <ColumnDefinition Width="84*"/>
+                    <ColumnDefinition Width="9*"/>
+                    <ColumnDefinition Width="69*"/>
+                    <ColumnDefinition Width="11*"/>
+                    <ColumnDefinition Width="71*"/>
+                    <ColumnDefinition Width="11*"/>
+                    <ColumnDefinition Width="344*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBox  Grid.Column="1"/>
+
+                <ComboBox Grid.Column="3"
+                          IsEditable="True"
+                              IsReadOnly="True"
+                              Text="Text_3" FontSize="8" Foreground="Gray"></ComboBox>
+
+                <TextBox Grid.Column="5"/>
+
+            </Grid>
+
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="9*"/>
+                    <ColumnDefinition Width="103*"/>
+                    <ColumnDefinition Width="352*"/>
+                    <ColumnDefinition Width="146*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Time pf purchase -" Grid.Column="1" Foreground="Gray"/>
+                <TextBlock Text="When did this pucrchase take place?" Grid.Column="2" Foreground="Gray" FontSize="10" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,3,0,2" Height="14" Width="186" />
+                <Button Grid.Column="3" Margin="0,3,10,0"  FontSize="8" Background="{x:Null}" BorderBrush="Gray" Foreground="Gray">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="image\image for any button\clock_32px.png" />
+                        <TextBlock Text="Time"/>
+                    </StackPanel>
+                </Button>
+            </Grid>
+
+
+
+        </Grid>
+
+
+        <Grid Grid.Row="6" Grid.ColumnSpan="3" Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="17*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="15*"/>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="14*"/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+
+
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="70*"/>
+                    <ColumnDefinition Width="428*"/>
+                    <ColumnDefinition Width="99*"/>
+                    <ColumnDefinition Width="8*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Technology -" Grid.Column="1" Foreground="Gray" />
+                <TextBlock Text="Which divice browser or operating system are they using " Foreground="Gray" Grid.Column="2" />
+                <Button Grid.Column="3" Margin="0,4,0,0"  FontSize="8" Background="{x:Null}" BorderBrush="Gray" Foreground="Gray">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="image\image for any button\trash_can_64px.png" Height="10" Width="11"/>
+                        <TextBlock Text="Delete" Height="9"/>
+                    </StackPanel>
+                </Button>
+
+
+
+
+            </Grid>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="107*"/>
+                    <ColumnDefinition Width="13*"/>
+                    <ColumnDefinition Width="87*"/>
+                    <ColumnDefinition Width="12*"/>
+                    <ColumnDefinition Width="98*"/>
+                    <ColumnDefinition Width="288*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="1">
+                    <ComboBox 
+                              IsEditable="True"
+                              IsReadOnly="True"
+                              Text="Text_4" FontSize="8" Foreground="Gray"></ComboBox>
+                </Grid>
+
+                <Grid Grid.Column="3">
+                    <ComboBox IsEditable="True"
+                              IsReadOnly="True"
+                              Text="Text_5" FontSize="8" Foreground="Gray"/>
+                </Grid>
+
+                <Grid Grid.Column="5" Grid.ColumnSpan="2">
+                    <TextBox Width="100" HorizontalAlignment="Left"/>
+                </Grid>
+
+
+            </Grid>
+            <Grid Grid.Row="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="13*"/>
+                    <ColumnDefinition Width="108*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="1" Background="{x:Null}" Content="+ More" FontSize="8" BorderBrush="Gray" Foreground="Gray"/>
+            </Grid>
+
+        </Grid>
+
+        <Grid Grid.Row="8" Grid.ColumnSpan="3" Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="14*"/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="99*"/>
+                <ColumnDefinition Width="16*"/>
+                <ColumnDefinition Width="131*"/>
+                <ColumnDefinition Width="295*"/>
+                <ColumnDefinition Width="62*"/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="1" Grid.Row="1" Text="New Condition" Grid.ColumnSpan="2" FontSize="10" />
+            <ComboBox Grid.Column="3" Grid.Row="1" IsEditable="True"
+                              IsReadOnly="True"
+                              Text="Text_6" FontSize="6" Foreground="Gray"></ComboBox>
+            <Button Grid.Column="5" Grid.Row="1"  Content="+ Add" FontSize="8" Background="#FF57BF9C" BorderBrush="Gray" Foreground="White"/>
+
+        </Grid>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
